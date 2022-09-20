@@ -1,0 +1,9 @@
+JS Array length
+JS Array concat
+JS Array push pop
+JS Array reverse
+JS Array shift unshift
+JS Array toString
+JS array slice splice
+JS Array join
+JS Array includes indexOf lastIndexOf

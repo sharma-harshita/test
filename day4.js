@@ -108,10 +108,9 @@
 let str = "Newton School MERN Stack Development";
 // School Newton
 
-// convert it to an array
-// reverse that array 
-// convert back to string
-
+// convert it to an array = split
+// reverse that array  = reverse
+// convert back to string = join
+ 
 const temp = str.split("").reverse().join("");
 console.log(temp);
-
