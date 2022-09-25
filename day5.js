@@ -74,11 +74,11 @@
 // console.log(value, a(23));
 
 //input
-const user = [
-    {id:1, name:"John", age:20, salary:25000}, 
-    {id:2, name:"Doe", age:24, salary:10000}, 
-    {id:3, name:"Harsh", age:27, salary:20000}
-]
+// const user = [
+//     {id:1, name:"John", age:20, salary:25000}, 
+//     {id:2, name:"Doe", age:24, salary:10000}, 
+//     {id:3, name:"Harsh", age:27, salary:20000}
+// ]
 
 // filter the people who has age less than 25
 
@@ -105,7 +105,7 @@ const user = [
 // destructure the elements 
 
 // let arr1 = [1, 2, 3, 6, 8, 9];
-// let arr2 = [10,20, ...arr1]
+// let arr2 = [10,20, ...arr1];
 
 // let obj1 = {
 //     id: 1,
@@ -145,6 +145,39 @@ const user = [
 // .map(value)
 
 
-function add (a, b){
-    console.log(a,b);
-}
+// function add (a, b){
+//     console.log(a,b);
+// }
+
+
+
+// a = 10,
+// b =  "john"
+// c = undefined
+// d = null 
+
+// arr = [1,2,3,4,5,5] = square brackets array literals
+// obj = {id:1, name : 23} =object literal, curly braces 
+
+// when you wnat to access individual elements of non prim data types = spread 
+// when you want to destructure the structured elements like arr and obj. 
+
+
+
+
+
+// const user = [
+//     {id:1, name:"John", age:20, salary:35000}, 
+//     {id:2, name:"Doe", age:24, salary:20000}
+// ]
+
+// const newUser = user.map(value=>({...value, age : 10}));
+// console.log(newUser, user);
+
+let arr = [1,1,2,2,2,3];
+let c = arr.toString();
+console.log(c);
+
+
+console.log(arr.lastIndexOf(2));
+
