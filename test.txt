@@ -8,7 +8,5 @@ IIFE
 Objects : objects.keys, .values
 call apply and bind
 
-
-
 Prototype Example
 
