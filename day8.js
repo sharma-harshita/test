@@ -75,49 +75,49 @@
 
 
 
-let obj = {
-    id : 1,
-    name : "John",
-    pincode : 305901,
-    city : "Ajmer"
-}
+// let obj = {
+//     id : 1,
+//     name : "John",
+//     pincode : 305901,
+//     city : "Ajmer"
+// }
 
 
-let obj2 = {
-    name : "John",
-    salary : 305901,
-}
+// let obj2 = {
+//     name : "John",
+//     salary : 305901,
+// }
 
-obj2.age= 25
+// obj2.age= 25
 
 
-let emp1 = {
-    rollno : 101,
-    color : "black"
-}
+// let emp1 = {
+//     rollno : 101,
+//     color : "black"
+// }
 
-// Object.keys
-// Object.values
+// // Object.keys
+// // Object.values
 
-console.log("Object = ", Object.keys(emp1), Object.keys(obj2));
-console.log("Object = ", Object.values(emp1), Object.values(obj2));
-console.log(emp1.color);
+// console.log("Object = ", Object.keys(emp1), Object.keys(obj2));
+// console.log("Object = ", Object.values(emp1), Object.values(obj2));
+// console.log(emp1.color);
 // let arr = [1,2,3,4]
 // console.log(arr);
 
 
-Array 
-Object 
-Function
-String 
+// Array 
+// Object 
+// Function
+// String 
 
 
 // All the inbuilt function that we use are defined 
 // inside their parent constructor function 
 
 
-let arr = [23,5,6,67]
+// let arr = [23,5,6,67]
 
-console.log(arr);
+// console.log(arr);
 
 // Prototype is an object to access the parent constructor function. which will help you to access all the inbuilt functions defined inside the parent constrcutor function.
