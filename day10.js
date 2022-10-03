@@ -26,7 +26,7 @@
 // const element = document.getElementById("heading4");
 // console.log(element.innerText);
 
-//innerText innerHTML
+//innerText innerHTML   
 
 
 function changeHeading () {
