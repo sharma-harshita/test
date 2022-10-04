@@ -5,8 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .newHead{
+            color:red;
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
+
+    <div onclick="alert('Hey div 2')">
+        <div onclick="alert('Hey div')">
+            <p onclick="alert('Hey p')">hey with bubbling</p>
+        </div>
+    </div>
+
+    <div onclick="alert('Hey div 2')">
+        <div onclick = event.stopPropagation()> 
+            <p onclick="alert('Hey p')">hey without bubbling</p>
+        </div>
+    </div>
+
     <!-- <h1>HELLO WORLD</h1>
     <h1>HELLO WORLD 2</h1>
     <h1 class="abc">HELLO WORLD 3</h1>
@@ -29,9 +48,28 @@
     </div> -->
 
 
-    <h1>Hello World</h1>
+    <!-- <h1>Hello World</h1> -->
+    <!-- <form>
+        <label for="">Heading</label>
+        <input type="text" placeholder="enter heading" id="heading" name="headingName" value="" />
+        <input type="submit"> -->
+        <!-- <button type="submit">Click</button>
+    </form> -->
+    <!-- <button onclick="changeHeading()">Change my heading</button> -->
 
-    <button onclick="changeHeading()">Change my heading</button>
+    <!-- <input type="text" id="heading" name="heading" value="" onchange="changeHeading()"/> -->
+
+
+    <!-- append child -->
+
+    <h1>Appending new elements</h1>
+    <div id="container">
+
+    </div>
+
+
+    <input type="text" id="head" name="head" value="">
+    <button onclick="addHeading()"> Click to Add </button>
 
     <script src="./day10.js"></script>
 </body>

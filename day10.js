@@ -29,8 +29,49 @@
 //innerText innerHTML   
 
 
-function changeHeading () {
-    const heading = document.getElementsByTagName("h1");
-    console.log(heading);
-    heading[0].innerText = "hey everyone";
+// function changeHeading () {
+//     const heading = document.getElementsByTagName("h1");
+//     console.log(heading);
+//     heading[0].innerText = "hey everyone";
+// }
+
+// function changeHeading () {
+//     const userInput = document.getElementById("heading").value;
+//     const heading = document.getElementsByTagName("h1");
+//     heading[0].innerText = userInput;
+// }
+
+
+// function changeHeading () {
+//     const userInput = document.getElementById("heading").value;
+//     console.log(userInput);
+//     const heading = document.getElementsByTagName("h1");
+//     heading[0].innerText = userInput;
+// }
+
+
+function addHeading(){
+    //access the value given by user
+    const userGivenValue = document.getElementById("head").value;
+
+    //create new element
+    const newElement = document.createElement("h1");    //<h1>hey</h1>
+    newElement.setAttribute("class", "newHead");
+    newElement.setAttribute("id", "newHead");
+    newElement.innerText = userGivenValue;
+
+    //access the element where you want to add new element
+    const container = document.getElementById("container");
+    
+    container.appendChild(newElement)
+    // document.getElementsByTagName("body")[0].appendChild(newElement);
 }
+
+
+
+
+// TYPE COERCION = coversion of data type by itslef or by machine => double equals to 
+// Type inversion = which developers do it by themselves 
+
+
+// propagation, bubbling , capturing 
