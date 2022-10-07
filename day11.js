@@ -8,6 +8,12 @@
 
 // deep copy , shallow copy in JS       HOMEWORK 
 
+//lets not discuss this topic
+
+// shallow copy -> when you want to create an object using another object using assignment operator, both variables will point to same memory location, change in one variable will impact both variables.
+
+// deep copy -> to make sure both objects are pointing to diff locations you will be using stringify.
+
 //shallow copy
 // let obj1 = {id:1, name:"John"};
 // let obj2 = obj1;
@@ -74,3 +80,73 @@
 
 
 // 
+
+
+// callback function 
+
+// function printVowel(char ,time, anotherChar){
+//     // setTimeout(function(){
+//     setTimeout(()=>{
+//         console.log("Char", char)
+//         anotherChar();
+//     }, time)
+// }
+
+//callback hell  - nested callback functions passed to a function 
+//creates a pyramid structure 
+
+// printVowel("A", 5000, ()=>{
+//     printVowel("E", 4000, ()=>{
+//         printVowel("I", 3000, ()=>{
+//             printVowel("O", 2000, ()=>{
+//                 printVowel("U", 1000, () =>{ 
+//                     console.log("END")
+//                 })
+//             })
+//         })
+//     })
+// })
+
+
+
+
+// printVowel("E", 4000)
+// printVowel("I", 3000)
+
+// Print  TimeOut
+// a       5 sec
+// e       4 sec
+// i       3 sec
+// o       2 sec
+// u       1 sec
+
+
+
+
+// Promises 
+// helps you to make async behaviour of JS-(webapis) to sync 
+
+function printVowel (char, timeout){
+    return new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            console.log(char);
+            resolve()
+        }, timeout);
+    }) 
+}
+
+//promise chaining
+
+printVowel("A", 5000)
+    .then(printVowel("E", 4000))
+    .then(printVowel("I", 3000))
+    .then(printVowel("O", 2000))
+    .then(printVowel("U", 1000))
+
+console.log("HELOO")
+//async await
+
+
+
+    
+//Promises : pending, fulfilled , rejected
