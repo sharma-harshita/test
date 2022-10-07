@@ -122,7 +122,7 @@
 
 
 
-
+console.log("HEY")
 // Promises 
 // helps you to make async behaviour of JS-(webapis) to sync 
 
@@ -138,12 +138,14 @@ function printVowel (char, timeout){
 //promise chaining
 
 printVowel("A", 5000)
-    .then(printVowel("E", 4000))
-    .then(printVowel("I", 3000))
-    .then(printVowel("O", 2000))
-    .then(printVowel("U", 1000))
+    .then(()=>printVowel("E", 4000))
+    .then(()=>printVowel("I", 3000))
+    .then(()=>printVowel("O", 2000))
+    .then(()=>printVowel("U", 1000))
+
 
 console.log("HELOO")
+
 //async await
 
 
