@@ -92,6 +92,7 @@
 //     }, time)
 // }
 
+
 //callback hell  - nested callback functions passed to a function 
 //creates a pyramid structure 
 
@@ -121,34 +122,118 @@
 // u       1 sec
 
 
+// function testPromise (num){
+//     return new Promise((resolve, reject)=>{
+//         if(num%2==0){
+//             resolve("Success")
+//         }else{
+//             reject("Reject")
+//         }
+//     })
+// }
 
-console.log("HEY")
-// Promises 
-// helps you to make async behaviour of JS-(webapis) to sync 
+// const promise1 = testPromise(20);
+// const promise2 = testPromise(21);
+// const promise3 = testPromise(10);
 
-function printVowel (char, timeout){
-    return new Promise((resolve, reject)=>{
-        setTimeout(() => {
-            console.log(char);
-            resolve()
-        }, timeout);
-    }) 
-}
+//await = always write this when you want the execution flow to stop at a certain line.
+//await always will be written in an async function
+
+// async function test(){
+//     const result = await Promise.all([promise1]);
+//     const result1 = await Promise.allSettled([promise1,promise2,promise3]);
+//     console.log(result1, result);
+// }
+
+// test()
+
+// testPromise(21)
+//     .then((res)=>{
+//         console.log("in then");
+//         console.log(res);
+//     })
+//     .catch((err)=>{
+//         console.log("in catch");
+//         console.log(err);
+//     })
+//     .finally(()=>{
+//         console.log("Promise done");
+//     })
+
+// console.log("HEY")
+// // Promises 
+// // helps you to make async behaviour of JS-(webapis-setTimeout, setInterval, fetch) to sync 
+
+// function printVowel (char, timeout){
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(() => {
+//             console.log(char);
+//             resolve()
+//         }, timeout);
+//     }) 
+// }
 
 //promise chaining
 
-printVowel("A", 5000)
-    .then(()=>printVowel("E", 4000))
-    .then(()=>printVowel("I", 3000))
-    .then(()=>printVowel("O", 2000))
-    .then(()=>printVowel("U", 1000))
+// printVowel("A", 5000)
+//     .then(()=>printVowel("E", 4000))
+//     .then(()=>printVowel("I", 3000))
+//     .then(()=>printVowel("O", 2000))
+//     .then(()=>printVowel("U", 1000))
 
 
-console.log("HELOO")
+// console.log("HELLO")
 
-//async await
-
-
-
-    
+// //async await
 //Promises : pending, fulfilled , rejected
+
+// function checkCanIVote(time,data) {
+//     // return the output using return keyword
+//     // do not console.log it
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             if(data>=18){ 
+//                 // console.log("You can vote");
+//                 resolve("You can vote");
+//             }else{
+//                 // console.log("You can not vote");
+//                 reject('You can not vote')
+//             }
+//         },time)
+//   })
+// }
+
+// checkCanIVote(2000, 70)
+//     .then((data)=>{
+//         console.log(data) // prints 'You can vote'
+//     })
+//     .catch((err)=>{
+//         console.log(err) // does not do anything
+//     })
+
+
+// checkCanIVote(2000, 16)
+//     .then((data)=>{
+//         console.log(data) // does not do anything
+//     }).catch((err)=>{
+//         console.log(err) // prints 'You can not vote'
+//     })
+
+
+
+
+// fetch 
+// fetch is a function which allows you to access and retrieve data from the API.
+// imp point : you will have to convert the data into json format first, in order to access it
+
+function showImage(){
+    fetch("https://www.breakingbadapi.com/api/characters?limit=2")
+    .then((res)=>res.json())
+    .then((data)=>{
+        console.log(data)
+        const imageTest = document.createElement("img");
+        imageTest.setAttribute("src", data[0].img);
+        document.getElementById("container").appendChild(imageTest)
+    })
+}
+
