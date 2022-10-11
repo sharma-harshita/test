@@ -237,3 +237,6 @@ function showImage(){
     })
 }
 
+
+
+axios.get()
