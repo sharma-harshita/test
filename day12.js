@@ -16,11 +16,7 @@
 //or if you want to use the result of the callback function to
 // execute the rest of the code 
 
-
-
 //function currying
-
-
 function a (){
     return function(){
         return function (){
@@ -37,5 +33,4 @@ function a (){
 // const value4 = value3();
 
 const value = a()()()();
-
 console.log(value);
