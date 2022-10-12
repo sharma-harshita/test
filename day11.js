@@ -239,4 +239,4 @@ function showImage(){
 
 
 
-axios.get()
+// axios.get()
