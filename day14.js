@@ -182,33 +182,33 @@
 //it is a property which return you a function, this function returns 
 //you the parent constructor function
 
-const obj1 = {
-    id:1,
-    name:"John",
-    salary:20000
-}
+// const obj1 = {
+//     id:1,
+//     name:"John",
+//     salary:20000
+// }
 
 
-let arr1 = [1,2,3,4,4]
+// let arr1 = [1,2,3,4,4]
 
-console.log(obj1.constructor === Object);
+// console.log(obj1.constructor === Object);
 // nullish coallescing operator in JS
 
 
 
 //property descriptors
 //not iterable, accessible, non modifable
-let user = {
-    empId : 1,
-    empSalary : 20000
-}
+// let user = {
+//     empId : 1,
+//     empSalary : 20000
+// }
 
-Object.defineProperty(user, "location", {value:"Delhi"})
-Object.assign(user, {dept:"HR"})
-user.location = "gurgaon";
-user.dept = "IT"
+// Object.defineProperty(user, "location", {value:"Delhi"})
+// Object.assign(user, {dept:"HR"})
+// user.location = "gurgaon";
+// user.dept = "IT"
 
-console.log(user);
-for (const value in user) {
-    console.log(value);
-}
+// console.log(user);
+// for (const value in user) {
+//     console.log(value);
+// }
