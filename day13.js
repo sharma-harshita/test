@@ -108,3 +108,5 @@ console.log("Area", value, box1.x, box1.y, box1);
 
 
 // decorators in js 
+
+// BABEL = transpiler who converts ES6 to ES5 
