@@ -212,3 +212,34 @@
 // for (const value in user) {
 //     console.log(value);
 // }
+
+// if(89){
+//     console.log("IF");
+// }else{
+//     console.log("ELSE");
+// }
+
+// "use strict"
+
+// function foo(){
+//     let x=y=0; 
+//     console.log(typeof x, y); 
+//     x++;  
+//     y++;
+//     return x;
+// }
+
+// console.log(foo(),typeof x,typeof y);
+
+
+fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((res)=>res.json())
+    .then((data)=>{
+        data.map((value)=>{
+            const ele = document.createElement("h1");
+            ele.innerText = value.title;
+            document.getElementById("container").appendChild(ele);
+        })  
+    })
+
+    
